@@ -1,0 +1,138 @@
+section.landing-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.landing{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 70vh; 
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.landing .brief{
+    align-self: center;
+    max-width: 80%;
+    padding-top: 50px;
+}
+.landing .brief h1{
+    color: #fff;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+    animation: sling .5s ease-out;
+    line-height: 43px;
+    letter-spacing: 3px
+}
+@keyframes sling{
+    from{
+        line-height: 0px;
+        opacity: 0;
+    }
+    to{
+        line-height: 70px;
+        opacity: 1;
+    }
+}
+.landing .brief p {
+    max-width: 700px;
+    line-height: 22px;
+    font-size: 18px;
+    background: rgb(0, 0, 0, .3);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 0px 50px rgba(0,0,0,.8);
+    border-top: 2px solid #fff
+}
+
+
+.landing .vendor{
+    align-self: flex-end;
+    color: #fff;
+    text-shadow: 1px 1px 1px  rgba(0,0,0,.5);
+    margin-left: 20px;
+}
+.landing .vendor .vend{
+    border-left: 5px solid #fff;
+    padding-left: 10px;
+    
+}
+.landing .vendor .vend h3,
+.landing .vendor .vend p{
+    padding: 0px;
+    margin: 0px;
+}
+.landing .vendor .vend p{
+    font-size: 14px;
+}
+.landing h1{
+    font-size: 4em
+}
+
+.snipNews{
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+.snipNews .news{
+    max-width: 430px !important;
+    position: relative;
+    align-self: stretch !important;
+    border-left: 1.2px solid #ff5555
+}
+.snipNews .news .title{
+    margin-bottom: 0px;
+    padding: 10px 0px;
+    color: #ff5555;
+    text-decoration: none;
+    border-bottom: 1.2px solid #eee
+}
+.snipNews .news:before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+     background: #ff5555;
+     top: 40%;
+     left: -10px;
+     border-radius: 3px;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 768px){
+    .landing{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .landing .brief{
+        align-self: center;
+        max-width: 98%;
+    }
+    .landing .brief h1{
+        font-size: 2em;
+        line-height: normal
+    }
+    .landing .brief p {
+        max-width: 90%;
+        line-height: 22px;
+        font-size: 16px;
+    }
+    .landing .vendor{
+        align-self: flex-start;
+        font-size: 14px;
+        margin-left: 0px;
+    }
+    .snipNews .news{
+        max-width: 93% !important;
+    }
+}

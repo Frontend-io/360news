@@ -1,0 +1,26 @@
+.newsList .newsList{
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    grid-gap: 10px;
+}
+.newsList .newsList .news{
+    max-width: 100% !important;
+}
+.newsList .large-news{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 10px;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 600px){
+    .newsList .newsList,
+    .newsList .large-news{
+        grid-template-columns: auto !important;
+    }
+
+}

@@ -1,0 +1,76 @@
+header{
+    box-sizing: border-box;
+    padding: 0px 10px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 99999999;
+    box-shadow:  0px 5px 30px rgba(0,0,0,.08),
+    
+}
+.header .logo{
+    font-weight: 600;
+    border-color: transparent;
+    border-radius: 3px;
+    overflow: hidden
+}
+.header .logo .home{
+    border: 1.2px solid #eee;
+    color: #555
+}
+.header nav > *{
+    padding: 5px;
+    margin: 0px 10px;
+    color: #aaa;
+    position: relative;
+}
+.header nav > *:hover{
+    color: #222
+}
+.header nav .innerLink{
+    cursor: pointer;
+}
+.header nav .innerLink  *{
+    color: #aaa;
+}
+.header nav .innerLink *:hover{
+    color: #222;   
+}
+.header nav > .innerLink:hover > .drop{
+    visibility: visible;
+    transition: .1s linear;
+    transform: translateY(0px) !important;
+    opacity: 1;
+}
+.header nav .innerLink .drop{
+    position: absolute;
+    top: 30px;
+    background: #fff;
+    opacity: 0;
+    z-index: 999;
+    left: 0px;
+    width: 150px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px -2px 12px rgba(0,0,0,.05), 0px 5px 30px rgba(0,0,0,.05);
+    visibility: hidden;
+    transition: .2s ease-out;
+    transform: translateY(30px);
+    
+}
+.header nav .innerLink .drop > * {
+    border-bottom: 1.2px solid #ddd;
+    padding: 6px 10px ;
+    margin: 0px;
+    cursor: pointer;
+
+}
+.header nav .innerLink .drop > *:last-child{
+    border: none
+}
+
+.header nav .innerLink .drop > *:hover{
+    background: #f2f2f2
+}

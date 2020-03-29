@@ -1,0 +1,20 @@
+
+.categories .tabs{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
+.categories .tabs .segment{
+    flex: 1;
+    border-radius: 3px;
+    min-width: 100px;
+}
+.categories .tabs .segment:hover{
+    background: rgb(14, 6, 41);
+    color: #eee
+}
+.categories .tabs .segment .count{
+    color: orange;
+    font-size: 18px
+}
