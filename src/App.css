@@ -24,6 +24,7 @@ body{
     position: relative;
     min-width: 120px;
     background: #aaa;
+    max-height: 200px
 
 }
 .news .img img{
@@ -36,7 +37,7 @@ body{
     box-sizing: border-box
 }
 .news .des .title{
-    padding-top: 20px !important;
+    padding-top: 20px ;
     text-decoration: underline;
     text-transform: capitalize;
 }

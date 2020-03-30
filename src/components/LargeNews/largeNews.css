@@ -7,7 +7,8 @@
 }
 .largeNews.news .img{
     width: 100%;
-    min-height: 120px;
+    min-height: 200px !important;
+    max-height: 100%
 }
 .largeNews.news img{
     height: 250px;

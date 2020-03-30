@@ -1,0 +1,26 @@
+.related .list{
+    margin-top: 20px;
+}
+.related .list .news{
+    margin-bottom: 15px !important;
+    width: auto;
+    max-width: 100%
+}
+.news .title{
+    font-size: 14px;
+    padding: 5px !important;
+}
+.related .news .img{
+    max-width: 80px;
+    max-height: 80px
+}
+
+.related .btn{
+    padding: 20px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #f2f2f2;
+    border-top: 1.2px solid #ccc
+
+}

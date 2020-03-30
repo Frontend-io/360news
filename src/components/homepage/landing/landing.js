@@ -2,7 +2,7 @@ import React from 'react';
 import "./landing.css"
 import FetchSome from '../../../container/utilities/FetchSome';
 import randID, { randNum } from '../../../randID';
-import { News } from '../../News/news';
+import { News, placeholderImage } from '../../News/news';
 import { connect } from "react-redux"
 // import Axios from 'axios';
 // import MockNews from '../../../container/Redux/data';
@@ -50,8 +50,8 @@ const Landing = (props)=>{
     return(
         <section className="landing-wrap">
             <div className="no-wrap grid apart landing" style={
-                {backgroundImage: `linear-gradient(to right, rgba(200, 0, 0, .4), rgba(0,0, 0, 0.7)), 
-                url(${landingNews.urlToImage})`}} >
+                {backgroundImage: `linear-gradient(to right, rgba(200, 0, 0, .5), rgba(0,0, 0, 0.4)), 
+                url(${landingNews.urlToImage ? landingNews.urlToImage : placeholderImage})`}} >
                 <div className="brief">
                         <h1>{landingNews.title}</h1>
                         <p>{landingNews.description}</p>

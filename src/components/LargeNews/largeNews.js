@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 
 const LargeNews = (props)=>{
      const {title, description:summary, urlToImage: image, source} = props.news
-    // console.log(props, "news")
-    const link = `/categories/${source.name.toLowerCase()}/${title.split(" ").join("-").toLowerCase()}-${source.id}`
+    const link = `/categories/${source.name.toLowerCase()}/${title.split(" ").join("-").toLowerCase()}`
 
     return(
         <Link to = {link}  className="largeNews news">
