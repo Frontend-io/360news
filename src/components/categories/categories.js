@@ -14,7 +14,9 @@ const Category = props=>{
         </Link>
     )
 } 
+
 export const TopBar = (props)=>{
+
     const title = props.title.toUpperCase()
     const styles = {
         color: "#aaa",
@@ -41,6 +43,8 @@ export const TopBar = (props)=>{
 }
 
 const Categories = (props)=>{
+
+    const title = props.match.path.split("/")[1]
     const list  = categories(props.state)   
 
     // Get length of categories
@@ -58,7 +62,7 @@ const Categories = (props)=>{
 
     return(
         <div className="categories">
-            <TopBar  title={props.match.path.split("/")[1]}/>
+            <TopBar  title={title}/>
            <div className="container">
                 <div className=" tabs">
                     {

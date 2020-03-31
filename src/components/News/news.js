@@ -10,7 +10,7 @@ export const News = (props)=>{
     const link = `/categories/${source.name.toLowerCase()}/${title.split(" ").join("-").toLowerCase()}`
     
     return(
-        <Link to={link} className="news">
+        <Link to={link} style={{paddingTop: 10}} className="news">
            
                 { !props.noImage && 
                      <div className="img">

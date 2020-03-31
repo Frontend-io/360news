@@ -17,6 +17,27 @@
 .read .paper p{
     font-size: 25px;
 }
+.read .goModal{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 30%;
+    animation: swing .2s linear;
+    z-index: 9999;
+    border-top-right-radius: 5px
+}
+.read .goModal  a:hover{
+    background: #222;
+    color: #eee
+}
+@keyframes swing{
+    from{
+        bottom: -50px;
+    }
+    to{
+        bottom: 0px
+    }
+}
 
 @media(max-width: 960px){
     .read .read-tab{
@@ -24,4 +45,16 @@
         grid-column-gap: 0px;
         grid-row-gap: 10px;
     }
+}
+
+@Media(max-width: 768px){
+    .read .paper p{
+        font-size: 16px;
+    }
+    .read .goModal{
+        border-top-right-radius: 0px;
+        width: 100%;
+        box-sizing: border-box
+    }
+    
 }

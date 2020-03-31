@@ -9,6 +9,9 @@
     margin-left: 0px !important;
 
 }
+.newsCategory ul li{
+    list-style: circle !important;
+}
 
 @media(max-width: 1000px){
     .news-wrap{

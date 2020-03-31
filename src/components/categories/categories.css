@@ -18,3 +18,9 @@
     color: orange;
     font-size: 18px
 }
+
+@media(max-width: 768px){
+    .top-bar h1{
+        font-size: 18px
+    }
+}

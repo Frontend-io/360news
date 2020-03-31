@@ -3,49 +3,18 @@ import "./landing.css"
 import FetchSome from '../../../container/utilities/FetchSome';
 import randID, { randNum } from '../../../randID';
 import { News, placeholderImage } from '../../News/news';
-import { connect } from "react-redux"
-// import Axios from 'axios';
-// import MockNews from '../../../container/Redux/data';
-
-
-
 
 
 
 const Landing = (props)=>{
 
-        
-    // const API_KEY = "775be0dc079c4a25b9db299e22d3effd"
-    // const QUERY = 'nigeria'
-    // const url = `https://newsapi.org/v2/everything?q=${QUERY}&apiKey=${API_KEY}`
-    // let  [state, setState] = useState({
-    // fetching: false,
-    // fetch_error: false,
-    // news: []
-    // })
-    // useEffect(
-    //     ()=>{
-    //         Axios
-    //         .get(url)
-    //         .then(response =>{
-    //             setState({...state, fetching: false, news: [response.data]})
-    //             console.log(response.data)
-    //         } )
-    //         .catch(err=>{
-    //             console.log(err.message);
-    //             setState({...state, fetching: false,fetch_error: true, news: []})
-    //         })
-    //     }
-    //     , [url]
+    // Fetch some numbers of news for the landing
+    const { properties } = FetchSome(props.news, 3)
 
-    // )
-
-    // Fetch Number of news
-    const { properties } = FetchSome(props.state.news, 3)
-    // Get random news for the landing
-    let landingNews = randNum(props.state.news)
+    // Get random news for the landing page
+    let landingNews = randNum(props.news)
     const date = new Date(landingNews.publishedAt).toDateString()
-    
+
 
     return(
         <section className="landing-wrap">
@@ -80,12 +49,7 @@ const Landing = (props)=>{
                 </div>
         </section>
     )
-
-}
-const mapStateToProps = state=>{
-    return {
-        state: state.news
-    }
 }
 
-export default connect(mapStateToProps)(Landing)
+
+export default Landing

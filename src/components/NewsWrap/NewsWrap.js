@@ -2,16 +2,10 @@ import React from 'react'
 import NewsList from '../newslist/list';
 import { categories } from '../../container/mockNews';
 import randID from '../../randID';
-import { connect } from "react-redux"
 
 
 const NewsWrap = (props) =>{
-
-   
-    const newsCategories = categories(props.news.news)
-
-    
-   
+    const newsCategories = categories(props.news)
 
     return(
         
@@ -23,15 +17,4 @@ const NewsWrap = (props) =>{
     )
 }
 
-
-const mapStateToProps = (state)=>{
-    return {
-        news: state.news
-    }
-}
-// const mapDispatchToProps = (dispatch)=>{
-//     return {
-//         loadNews:  ()
-//     }
-// }
-export default connect(mapStateToProps)(NewsWrap)
+export default NewsWrap

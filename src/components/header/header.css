@@ -58,14 +58,15 @@ header{
     visibility: hidden;
     transition: .2s ease-out;
     transform: translateY(30px);
-    
+}
+.header i{
+    font-size: 25px;
 }
 .header nav .innerLink .drop > * {
     border-bottom: 1.2px solid #ddd;
     padding: 6px 10px ;
     margin: 0px;
     cursor: pointer;
-
 }
 .header nav .innerLink .drop > *:last-child{
     border: none
@@ -73,4 +74,41 @@ header{
 
 .header nav .innerLink .drop > *:hover{
     background: #f2f2f2
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        padding: 15px 5px;
+        position: fixed;
+        width: 100%;
+    }
+    .header.mobile nav{
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        background: #222;
+        width: 100%;
+        left: 50%;
+        top: -500px;
+        transform: translateX(-50%);
+        padding: 10px;
+        transition: .5s;
+    }
+    .header.mobile.open nav{
+        visibility: visible;
+        top: 78px;
+        transition: .5s;
+    }
+    .header.mobile nav *:hover{
+        color: #eee;   
+    }
+    .header.mobile nav a{
+        border-bottom: 1.2px solid #777;
+        margin: 10px 0px;
+    }
+    .header.mobile nav .innerLink {
+        margin-left: 0px;
+        border-bottom: 1.2px solid #777;
+        margin: 0px 0px 10px 0px;
+    }
 }

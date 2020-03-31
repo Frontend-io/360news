@@ -6,13 +6,11 @@ import { RouterMain } from './container/router/router';
 import { store } from './container/Redux/Store/store';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
-// import axios from 'axios';
+import Logger from './components/portal/modal/logger';
+
 
 function App() {
 
-  
-
-  
   return (
     <Provider store={store}>
         <div className="App">
@@ -21,6 +19,7 @@ function App() {
                 <RouterMain />
             </div>
           <Footer />
+          <Logger />
         </div>
     </Provider>
   );

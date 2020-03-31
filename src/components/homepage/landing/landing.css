@@ -113,19 +113,21 @@ section.landing-wrap{
     .landing{
         flex-direction: column;
         padding: 10px;
+        margin-top: 80px;
     }
     .landing .brief{
         align-self: center;
         max-width: 98%;
+        padding-top: 20px;
     }
     .landing .brief h1{
-        font-size: 2em;
-        line-height: normal
+        font-size: 2.2em;
+        line-height: normal;
     }
     .landing .brief p {
-        max-width: 90%;
-        line-height: 22px;
-        font-size: 16px;
+        line-height: 24px;
+        font-size: 18px;
+        padding: 10px;
     }
     .landing .vendor{
         align-self: flex-start;
