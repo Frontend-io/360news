@@ -7,12 +7,9 @@ import randID from '../../randID';
 import "./related.css"
 
 const Related = props=>{
-    
-
     const newsCase = props.metaData[0];
     const tag = newsCase.source.id
     const relatedNews = fetchCategory(props.state,tag)
-    
 
     return(
         <div className="mat shadow white related">
@@ -31,7 +28,7 @@ const Related = props=>{
                     relatedNews.length < 1 && <p className="padded-10 grey-t centered-text ">Sorry, there are currently no related News</p>
                 }
             </div>
-            <Link to="/" className="full-width btn"> <i className="fa fa-home"></i> Return to Home</Link>
+            <Link to="/" className="full-width btn"> Return to Home</Link>
         </div>
     )
 }

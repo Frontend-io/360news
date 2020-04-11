@@ -7,12 +7,12 @@ import { News, placeholderImage } from '../../News/news';
 
 
 const Landing = (props)=>{
-
+    const news = props.news.news
     // Fetch some numbers of news for the landing
-    const { properties } = FetchSome(props.news, 3)
+    const { properties } = FetchSome(news, 3)
 
     // Get random news for the landing page
-    let landingNews = randNum(props.news)
+    const landingNews = randNum(news)
     const date = new Date(landingNews.publishedAt).toDateString()
 
 

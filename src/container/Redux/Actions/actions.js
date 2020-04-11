@@ -12,7 +12,7 @@ export const fetchNewsRequest = ()=>{
 export const fetchNewsSuccess = (payload)=>{
     return{
         type: "FETCH_NEWS_SUCCESS",
-        payload: payload
+        payload
     }
 }
 
@@ -20,7 +20,7 @@ export const fetchNewsSuccess = (payload)=>{
 export const fetchNewsFailure = (payload)=>{
     return{
         type: "FETCH_NEWS_FAILURE",
-        payload: payload
+        payload
     }
 }
 
@@ -37,6 +37,7 @@ export const fetchNews = (query)=>{
         const default_queries = ['africa', 'nigeria', 'covid-19', 'corona virus', 'programming', 'technology', 'software', 'education', 'science', 'space']
         const random_default_query = randNum(default_queries)
         const url = `https://newsapi.org/v2/everything?q=${query ? query : random_default_query}&apiKey=${API_KEY}`
+        
         axios.get(url)
         .then(response => {
             // Push news data to state
@@ -54,5 +55,12 @@ export const fetchNews = (query)=>{
 export const clearLog = ()=>{
     return{
         type: "CLEAR_MESSAGE_LOG"
+    }
+}
+
+export const printLog = (payload)=>{
+    return{
+        type: "PRINT_LOG",
+        payload
     }
 }

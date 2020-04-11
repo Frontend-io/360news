@@ -3,33 +3,35 @@ import { connect } from "react-redux"
 import Landing from './landing/landing';
 import NewsWrap from '../NewsWrap/NewsWrap';
 import { fetchNews } from '../../container/Redux/Actions/actions';
+import "./home.css"
 
 
-const Home = (props)=>{
-
+const Home = ({fetchNews,state})=>{
     // Fetch news onLoad
     useEffect(()=>{
-        props.dispatch(fetchNews())
-    },[])
-
-    // Backup last loaded news in localStorage
-    useEffect(
-        ()=>{
-            localStorage.setItem("news", JSON.stringify(props.state))
-        }, [props.state]
-    )
-
+        fetchNews()
+    }, [])
 
     return(
-        <div className="home">
+        <section className="home">
            {
-               props.state.length &&
+               state.news.length > 0 ? 
                <>
-                    <Landing news={props.state} />
-                    <NewsWrap news={props.state} />
+                    <Landing news={state} />
+                    <NewsWrap news={state} />
                </>
+               : null
+               
            }
-        </div>
+           {
+                !state.length && 
+               <div className="padded-20 white mat shadow grid centered-text grey-t align-c centered void">
+                   <h1>OooooopS!</h1>
+                   <p>Sorry, but we cannot load your content at the moment</p>
+                   <p>Apparently, you have a <b>Network error</b> </p>
+               </div>
+           }
+        </section>
     )
 }
 
@@ -38,13 +40,13 @@ const Home = (props)=>{
 
 const mapStateToProps = (state)=>{
     return{
-        state: state.news.news
+        state: state.news
     }
 }
 
 const mapDispatchToProps = (dispatch)=>{
     return{
-        dispatch: (action)=> dispatch(action)
+        fetchNews: ()=> dispatch(fetchNews("Nigeria"))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

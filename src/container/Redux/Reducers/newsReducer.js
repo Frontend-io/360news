@@ -4,7 +4,8 @@ const initialState = {
     title: "360News",
     message: "",
     fetching: false,
-    canLog: false
+    canLog: false,
+    preloader: true
 }
 
 
@@ -17,7 +18,8 @@ export const NewsReducer = (state = initialState, action)=>{
             return{
                 ...state,
                 fetching: true,
-                message: "Fetching News, please wait..."
+                message: "Fetching News, please wait...",
+                preloader : true
             }
         case "FETCH_NEWS_SUCCESS":
             return {
@@ -25,7 +27,8 @@ export const NewsReducer = (state = initialState, action)=>{
                 news: payload['articles'],
                 message: `Fetched ${payload.articles.length} News sucessfully!`,
                 fetching: false,
-                canLog : true
+                canLog : true,
+                preloader : false
             }
         case "FETCH_NEWS_FAILURE":
                 return {
@@ -33,12 +36,18 @@ export const NewsReducer = (state = initialState, action)=>{
                     news: [...state.news],
                     fetching: false,
                     title: state.title,
-                    canLog: true
+                    canLog: true,
+                    preloader : false
                 }
         case 'CLEAR_MESSAGE_LOG':
             return{
                 ...state,
                 message : ""
+            }
+        case "PRINT_LOG":
+            return{
+                ...state,
+                message: payload
             }
         default: 
             return state

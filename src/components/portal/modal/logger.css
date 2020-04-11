@@ -31,7 +31,8 @@
 @media(max-width: 768px){
     .logger{
         width: 95% ;
-        padding: 10px 20px !important 
+        padding: 10px 20px !important ;
+        box-sizing: border-box
     }
     .logger h3{
         font-size: 16px;

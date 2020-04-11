@@ -7,6 +7,7 @@ import { store } from './container/Redux/Store/store';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Logger from './components/portal/modal/logger';
+import Preloader from './components/preloader/preloader';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             </div>
           <Footer />
           <Logger />
+          <Preloader />
         </div>
     </Provider>
   );

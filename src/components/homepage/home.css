@@ -1,0 +1,18 @@
+.void{
+    min-height: 50vh;
+    width: 90%;
+    margin: 0px auto;
+    flex-direction: column
+}
+.void h1{
+    font-size: 4em;
+    color: #000
+}
+
+@media(max-width: 768px){
+    .void h1{
+        font-size: 3.3em;
+        color: #000
+    }
+    
+}

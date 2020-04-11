@@ -80,7 +80,7 @@ section.landing-wrap{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
 }
 .snipNews .news{
     max-width: 430px !important;
