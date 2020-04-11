@@ -7,7 +7,7 @@ export const placeholderImage = "https://nbhc.ca/sites/default/files/styles/arti
 
 export const News = (props)=>{
     const {title, description:summary, urlToImage: image, source} = props.newsInfo
-    const link = `/categories/${source.name.toLowerCase()}/${title.split(" ").join("-").split("%").join().toLowerCase()}`
+    const link = `/categories/${source.name.toLowerCase()}/${title.split(" ").join("-").toLowerCase()}`
     
     return(
         <Link to={link} style={{paddingTop: 10}} className="news">

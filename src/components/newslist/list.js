@@ -12,6 +12,7 @@ import FetchSome from '../../container/utilities/FetchSome';
 const NewsList = (props)=>{
     
     const { properties } = FetchSome( props.state)
+    // console.log(properties, "list")
     
 
     return(
@@ -23,10 +24,12 @@ const NewsList = (props)=>{
                     <Category category={props.category} btnColor="red"/>
                         <div className="newsList">
                             {
-                                 properties.map( item =>(
-                                    (item.source.name.toLowerCase() === props.category.toLowerCase() ) ? 
-                                    <News news={item} key={randID()}/> : null
-                                )) 
+                                properties.map(item =>{
+                                    if(item.source.name.toLowerCase() === props.category.toLowerCase()){
+                                        return <News newsInfo={item} key={randID()}/>
+                                    }
+                                    return true
+                                })
                             }  
                         </div>
                         <div className="large-news">
