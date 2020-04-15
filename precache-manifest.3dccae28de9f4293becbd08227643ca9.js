@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a884fd3e8662a3fadb53e6d86f4ea659",
+    "revision": "f7fe9b215e1b5cbded1008315a9d9882",
     "url": "/360news/index.html"
   },
   {
-    "revision": "5ff3deb5e1ce4de0b50a",
+    "revision": "5a8351c084e113897223",
     "url": "/360news/static/css/main.c597d06e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/360news/static/js/2.1220556e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5ff3deb5e1ce4de0b50a",
-    "url": "/360news/static/js/main.19f8ecd2.chunk.js"
+    "revision": "5a8351c084e113897223",
+    "url": "/360news/static/js/main.816ce302.chunk.js"
   },
   {
     "revision": "6b3dae89abc2b135e642",

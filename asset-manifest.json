@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/360news/static/css/main.c597d06e.chunk.css",
-    "main.js": "/360news/static/js/main.19f8ecd2.chunk.js",
-    "main.js.map": "/360news/static/js/main.19f8ecd2.chunk.js.map",
+    "main.js": "/360news/static/js/main.816ce302.chunk.js",
+    "main.js.map": "/360news/static/js/main.816ce302.chunk.js.map",
     "runtime-main.js": "/360news/static/js/runtime-main.3d4c0fcf.js",
     "runtime-main.js.map": "/360news/static/js/runtime-main.3d4c0fcf.js.map",
     "static/js/2.1220556e.chunk.js": "/360news/static/js/2.1220556e.chunk.js",
     "static/js/2.1220556e.chunk.js.map": "/360news/static/js/2.1220556e.chunk.js.map",
     "index.html": "/360news/index.html",
-    "precache-manifest.800f283c9883b922251073e7c2893d26.js": "/360news/precache-manifest.800f283c9883b922251073e7c2893d26.js",
+    "precache-manifest.3dccae28de9f4293becbd08227643ca9.js": "/360news/precache-manifest.3dccae28de9f4293becbd08227643ca9.js",
     "service-worker.js": "/360news/service-worker.js",
     "static/css/main.c597d06e.chunk.css.map": "/360news/static/css/main.c597d06e.chunk.css.map",
     "static/js/2.1220556e.chunk.js.LICENSE.txt": "/360news/static/js/2.1220556e.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3d4c0fcf.js",
     "static/js/2.1220556e.chunk.js",
     "static/css/main.c597d06e.chunk.css",
-    "static/js/main.19f8ecd2.chunk.js"
+    "static/js/main.816ce302.chunk.js"
   ]
 }
