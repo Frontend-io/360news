@@ -4,13 +4,11 @@ import "./preloader.css"
 
 
 const Preloader = () =>{
-
     const status = useSelector((state)=>{
         return{
             state: state.news
         }
     })
-    
     
 
     return(
@@ -18,7 +16,7 @@ const Preloader = () =>{
             {
                 status.state.preloader &&
                 <div className="preloader">
-                    <div className="loader">j</div>
+                    <div className="loader"></div>
                 </div>
             }
         </>

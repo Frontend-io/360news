@@ -86,16 +86,16 @@ section.landing-wrap{
     max-width: 430px !important;
     position: relative;
     align-self: stretch !important;
-    border-left: 1.2px solid #ff5555
 }
 .snipNews .news .title{
+    font-size: 1.1em;
     margin-bottom: 0px;
-    padding: 10px 0px;
-    color: #ff5555;
+    padding: 10px 0px 15px 0px !important;
+    color: #222222;
     text-decoration: none;
     border-bottom: 1.2px solid #eee
 }
-.snipNews .news:before{
+/* .snipNews .news:before{
     position: absolute;
     content: "";
     height: 20px;
@@ -105,7 +105,7 @@ section.landing-wrap{
      top: 40%;
      left: -10px;
      border-radius: 3px;
-}
+} */
 
 /* Responsiveness */
 
@@ -113,8 +113,11 @@ section.landing-wrap{
     .landing{
         flex-direction: column;
         padding: 10px;
-        margin-top: 80px;
     }
+    .snipNews .news{
+        margin-bottom: 15px !important;
+    }
+    
     .landing .brief{
         align-self: center;
         max-width: 98%;

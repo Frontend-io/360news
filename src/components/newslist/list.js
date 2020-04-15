@@ -10,10 +10,9 @@ import FetchSome from '../../container/utilities/FetchSome';
 
 
 const NewsList = (props)=>{
-    
+
     const { properties } = FetchSome( props.state)
-    // console.log(properties, "list")
-    
+    // console.log(properties)
 
     return(
         <>
@@ -24,22 +23,20 @@ const NewsList = (props)=>{
                     <Category category={props.category} btnColor="red"/>
                         <div className="newsList">
                             {
-                                properties.map(item =>{
-                                    if(item.source.name.toLowerCase() === props.category.toLowerCase()){
-                                        return <News newsInfo={item} key={randID()}/>
-                                    }
-                                    return true
-                                })
+                                properties.map(item =>(
+                                    (item.source.name.toLowerCase() === props.category.toLowerCase() )  &&
+                                    <News newsInfo={item} key={randID()}/>
+                                ))
                             }  
                         </div>
-                        <div className="large-news">
+                        {/* <div className="large-news">
                             {
                                 properties.map( item =>(
                                     (item.source.name.toLowerCase() === props.category.toLowerCase() ) ? 
                                     <LargeNews news={item} key={randID()}/> : null
                                 ))                   
                             }
-                        </div>     
+                        </div>      */}
                     </div>
                 </div>
             }

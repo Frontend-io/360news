@@ -28,21 +28,13 @@ const Header = () =>{
                      "grid apart mobile header" :
                 "grid apart header"
 
-
     return(
         <header  className={classes} >
-            <div className="grouped logo">
+            <div className="logo">
                 <Link className="home"  to="/">360News</Link>
-                {
-                     status.length &&
-                     <button onClick={()=>{
-                        window.history.back()
-                    }} >Go back</button>
-                }
             </div>
            {
                status.length &&
-           
                <nav className="grid">
                <Link to={"/categories/us"} >US</Link>
                <ul className=" innerLink">Africa

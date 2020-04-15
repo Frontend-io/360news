@@ -10,6 +10,7 @@ const initialState = {
 
 
 
+
 export const NewsReducer = (state = initialState, action)=>{
         
     const { type, payload } = action
@@ -24,7 +25,7 @@ export const NewsReducer = (state = initialState, action)=>{
         case "FETCH_NEWS_SUCCESS":
             return {
                 ...state, 
-                news: payload['articles'],
+                news: payload.articles,
                 message: `Fetched ${payload.articles.length} News sucessfully!`,
                 fetching: false,
                 canLog : true,
@@ -42,12 +43,14 @@ export const NewsReducer = (state = initialState, action)=>{
         case 'CLEAR_MESSAGE_LOG':
             return{
                 ...state,
-                message : ""
+                message : "",
+                canLog : false
             }
         case "PRINT_LOG":
             return{
                 ...state,
-                message: payload
+                message: payload,
+                canLog: true
             }
         default: 
             return state

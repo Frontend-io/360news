@@ -8,13 +8,13 @@ import "./related.css"
 
 const Related = props=>{
     const newsCase = props.metaData[0];
-    const tag = newsCase.source.id
+    const tag = newsCase.source.id !== null ? newsCase.source.id : newsCase.source.name
     const relatedNews = fetchCategory(props.state,tag)
 
     return(
         <div className="mat shadow white related">
             <div className="padded-10 grid align-c apart head">
-                <h3 className="grey-t">Related news</h3>
+                <h3 className="grey-t">More from {tag} -</h3>
                 <span className="orange-t">{relatedNews.length}</span>
             </div>
             <div className="divider"></div>
@@ -25,7 +25,8 @@ const Related = props=>{
                     ))
                 }
                 {
-                    relatedNews.length < 1 && <p className="padded-10 grey-t centered-text ">Sorry, there are currently no related News</p>
+                    relatedNews.length < 1 && 
+                    <p className="padded-10 grey-t centered-text ">Sorry, there are currently no related News</p>
                 }
             </div>
             <Link to="/" className="full-width btn"> Return to Home</Link>

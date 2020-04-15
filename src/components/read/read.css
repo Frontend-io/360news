@@ -38,6 +38,9 @@
         bottom: 0px
     }
 }
+.news{
+    flex-direction: row 
+}
 
 @media(max-width: 960px){
     .read .read-tab{

@@ -19,7 +19,7 @@ const Landing = (props)=>{
     return(
         <section className="landing-wrap">
             <div className="no-wrap grid apart landing" style={
-                {backgroundImage: `linear-gradient(to right, rgba(200, 0, 0, .5), rgba(0,0, 0, 0.4)), 
+                {backgroundImage: `linear-gradient(to right, rgba(200, 0, 0, .5), rgba(0,0, 0, 0.5)), 
                 url(${landingNews.urlToImage ? landingNews.urlToImage : placeholderImage})`}} >
                 <div className="brief">
                         <h1>{landingNews.title}</h1>

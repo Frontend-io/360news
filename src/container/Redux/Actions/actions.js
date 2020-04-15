@@ -25,7 +25,7 @@ export const fetchNewsFailure = (payload)=>{
 }
 
 // Async action to fetch news
-export const fetchNews = (query)=>{
+export const fetchNews = (keyword)=>{
 
     return (dispatch)=>{
         // Set fetching flag to true
@@ -34,9 +34,10 @@ export const fetchNews = (query)=>{
         // Fetch news
         const API_KEY = "775be0dc079c4a25b9db299e22d3effd"
         // Randomly select a category if no query is passed
-        const default_queries = ['africa', 'nigeria', 'covid-19', 'corona virus', 'programming', 'technology', 'software', 'education', 'science', 'space']
-        const random_default_query = randNum(default_queries)
-        const url = `https://newsapi.org/v2/everything?q=${query ? query : random_default_query}&apiKey=${API_KEY}`
+        // const default_queries = ['africa', 'nigeria', 'covid-19', 'corona virus', 'programming', 'technology', 'software', 'education', 'science', 'space']
+        // const random_default_query = randNum(default_queries)
+        // const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`
+        const url = `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${API_KEY}`
         
         axios.get(url)
         .then(response => {

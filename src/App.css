@@ -40,7 +40,8 @@ body{
 }
 .news .des .title{
     padding-top: 20px ;
-    text-decoration: underline;
+    font-size: 100%;
+    /* text-decoration: underline; */
     text-transform: capitalize;
 }
 .news .des p{
